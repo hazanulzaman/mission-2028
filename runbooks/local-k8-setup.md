@@ -115,3 +115,5 @@ Important Concepts:
 - Pods are scheduled based on declared resource requirements.
 - If a node fails, pods are recreated elsewhere (if capacity exists).
 - Desired state enforcement is core Kubernetes principle.
+
+---
