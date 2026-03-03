@@ -149,6 +149,20 @@ Therefore:
 
 Git = single source of truth.
 
+### 9. GitOps Definition
+
+GitOps is an operational model where Git acts as the single source of truth for infrastructure and application configuration, and an automated controller continuously reconciles the live system to match the state defined in Git.
+
+In a GitOps workflow:
+
+1. Infrastructure and application manifests are stored in Git.
+2. Any change to the system is made through a Git commit.
+3. A controller monitors the repository.
+4. The controller compares the desired state in Git with the actual state in the cluster.
+5. If differences are detected, the controller updates the cluster to match Git.
+
+In this setup, Argo CD acts as the controller that implements GitOps for Kubernetes by continuously synchronizing the cluster with the configuration stored in Git.
+
 ⸻
 
 Commands Used Today
