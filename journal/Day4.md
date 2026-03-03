@@ -182,6 +182,19 @@ automated:
 prune: true
 selfHeal: true
 
+or, run the cmd ;
+
+kubectl -n argocd patch application hello-ngnix --type merge -p '{ 
+  "spec": {
+    "syncPolicy": {
+      "automated": {
+        "prune": true,
+        "selfHeal": true
+      }
+    }
+  }
+}'
+
 Scale deployment manually (drift test):
 
 kubectl -n default scale deployment hello-nginx –replicas=5
